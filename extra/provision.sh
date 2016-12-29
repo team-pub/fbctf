@@ -207,7 +207,7 @@ if [[ "$CODE_PATH" != "$CTF_PATH" ]]; then
     # This is because sync'ing files is done with unison
     if [[ "$MODE" == "dev" ]]; then
         log "Configuring git to ignore permission changes"
-        git config core.filemode false
+        git config --global core.filemode false
         log "Setting permissions"
         sudo chmod -R 777 "$CTF_PATH/"
     fi
